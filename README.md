@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Raqmee Skills Test - Abdullah Ayman
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+I created a the app and set up all the necessary assets including:
 
-In the project directory, you can run:
+- **Tailwind CSS** for styling
+- **FontAwesome** for icons
+- **Google Fonts** to use the Lexend Deca font, which was specified in the Figma design
 
-### `npm start`
+## Features Implemented
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. **Product Component**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I began by creating a `Product` component that displays the following product information:
 
-### `npm test`
+- **Image** of the product
+- **Name** of the product
+- **Price**
+- **Owner**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I mapped all the products and checked if data saved at localstorge or not if not some data will be stored
 
-### `npm run build`
+### 2. **Responsive Layout**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The product mapping depends on the **screen width** to determine how many products are displayed per line. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. **Search Functionality**
 
-### `npm run eject`
+I implemented a **search bar** that allows users to search for products by **name** or **category**.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. **Filter and Sort Dropdowns**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Filter Dropdown**: I created a dropdown to filter products by category.
+- **Sort Dropdown**: A dropdown was created to allow sorting by:
+  - **Price**: Sorting products from **high to low** or **low to high**.
+  - **Alphabetical Order**: Sorting products alphabetically.
+  
+  I hadn’t previously implemented an alphabetical sort, so I researched and learned about the `localeCompare()` function in JavaScript, which helped me achieve this.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 5. **Pagination**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+I implemented **pagination** to display products across multiple pages, with **4 products per page** by default.
 
-## Learn More
+- If the screen width is between **768px and 1024px**, only **3 products per page** are shown.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 6. **Add Product Form with Validation**
 
-### Code Splitting
+I created a form for adding new products, which includes **validation** and **error messages** for each field.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 7. **Handling Local Storage and Image Files**
 
-### Analyzing the Bundle Size
+I developed the functionality to **add products** and store them in `localStorage`. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ I didn't work on function t0 save files to `localStorage`. Since `localStorage` only supports text data, I researched and learned how to convert files to Base64 text. 
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- I used the `FileReader` API and the `readAsDataURL()` method to convert the file to a Base64 string before saving it.
+- The Base64 string was then saved to `localStorage`, and I used the converted data to display the image back in the application.
