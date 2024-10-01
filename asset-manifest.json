@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Raqmee-skills-test/static/css/main.7eedf185.css",
+    "main.js": "/Raqmee-skills-test/static/js/main.0136fa3b.js",
+    "static/js/453.1804b2e8.chunk.js": "/Raqmee-skills-test/static/js/453.1804b2e8.chunk.js",
+    "static/media/owner.png": "/Raqmee-skills-test/static/media/owner.2e0ab3495449940c9c7b.png",
+    "index.html": "/Raqmee-skills-test/index.html",
+    "main.7eedf185.css.map": "/Raqmee-skills-test/static/css/main.7eedf185.css.map",
+    "main.0136fa3b.js.map": "/Raqmee-skills-test/static/js/main.0136fa3b.js.map",
+    "453.1804b2e8.chunk.js.map": "/Raqmee-skills-test/static/js/453.1804b2e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7eedf185.css",
+    "static/js/main.0136fa3b.js"
+  ]
+}
